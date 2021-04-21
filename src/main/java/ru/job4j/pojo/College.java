@@ -8,7 +8,7 @@ public class College {
         student.setGroup("MT-1");
         student.setAdmission(new Date());
 
-        System.out.println(student.getFullname() + "\n" + student.getGroup() + "\n" + student.getAdmission());
+        System.out.println(student.getFullname() + System.lineSeparator() + student.getGroup() + System.lineSeparator() + student.getAdmission());
     }
 
 }
