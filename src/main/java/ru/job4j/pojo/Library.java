@@ -12,8 +12,8 @@ public class Library {
         array[2] = gita;
         array[3] = clean;
         System.out.println("Simple output.");
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i].getName() + " - " + array[i].getQuantity());
+        for (Book i : array) {
+            System.out.println(i.getName() + " - " + i.getQuantity());
         }
         Book temp = array[0];
         array[0] = array[3];
@@ -24,8 +24,9 @@ public class Library {
         }
         System.out.println("Clean Code only.");
         for (int i = 0; i < array.length; i++) {
-            if (array[i].getName().equals("Clean Code"))
-            System.out.println(array[i].getName() + " - " + array[i].getQuantity());
+            if ("Clean Code".equals(array[i].getName())) {
+                System.out.println(array[i].getName() + " - " + array[i].getQuantity());
+            }
         }
     }
 }
