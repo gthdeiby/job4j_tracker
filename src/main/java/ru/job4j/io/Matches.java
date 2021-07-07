@@ -16,8 +16,7 @@ public class Matches {
                 turn = !turn;
                 count -= matches;
                 System.out.println("На столе осталось " + count + " спичек");
-            }
-            else {
+            } else {
                 System.out.println("Это не число от 1 до 3");
             }
         }

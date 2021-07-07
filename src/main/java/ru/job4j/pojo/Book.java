@@ -5,7 +5,7 @@ public class Book {
     private String name;
     private int quantity;
 
-    public Book (String name, int quantity) {
+    public Book(String name, int quantity) {
         this.name = name;
         this.quantity = quantity;
     }
