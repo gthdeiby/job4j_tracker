@@ -86,7 +86,7 @@ public class StartUI {
         Tracker tracker = new Tracker();
         new StartUI().init(input, tracker);
         Item item = new Item();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM0-EEEE-yyyy HH:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
         String currentDateTimeFormat = item.getCreated().format(formatter);
         System.out.println(currentDateTimeFormat);
     }
