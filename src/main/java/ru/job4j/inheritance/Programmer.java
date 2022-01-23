@@ -4,9 +4,6 @@ public class Programmer extends Engineer {
 
     private boolean completeJob4j;
 
-    public Programmer() {
-    }
-
     public Programmer(String name,
                       String surname,
                       String education,

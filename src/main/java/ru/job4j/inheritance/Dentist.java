@@ -4,10 +4,7 @@ public class Dentist extends Doctor {
 
     private boolean time;
 
-    public Dentist() {
-    }
-
-    public Dentist(String name,
+     public Dentist(String name,
                    String surname,
                    String education,
                    String birthday,

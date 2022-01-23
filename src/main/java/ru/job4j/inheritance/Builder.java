@@ -4,9 +4,6 @@ public class Builder extends Engineer {
 
     private int rank;
 
-    public Builder() {
-    }
-
     public Builder(String name,
                    String surname,
                    String education,

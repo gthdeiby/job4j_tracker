@@ -4,9 +4,6 @@ public class Doctor extends Profession {
 
     private String city;
 
-    public Doctor() {
-    }
-
     public Doctor(String name,
                   String surname,
                   String education,
