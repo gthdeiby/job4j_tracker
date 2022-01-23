@@ -4,9 +4,6 @@ public class Surgeon extends Doctor {
 
     private int category;
 
-    public Surgeon() {
-    }
-
     public Surgeon(String name,
                    String surname,
                    String education,
