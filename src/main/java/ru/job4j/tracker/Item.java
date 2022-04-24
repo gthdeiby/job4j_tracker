@@ -60,7 +60,6 @@ public class Item implements Comparable<Item> {
         return this.getName().compareTo(o.getName());
     }
 
-    @SuppressWarnings("checkstyle:LineLength")
     @Override
     public boolean equals(Object o) {
         if (this == o) {
