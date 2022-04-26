@@ -17,17 +17,17 @@ public class BankService {
     /**
      * Метод проверяет, что такого пользователя нет в системе, и добавляет его.
      * Новому пользователю присваивается пустой список банковских счетов.
-     *@param user - добавляемый пользователь
+     *@param user добавляемый пользователь.
      */
     public void addUser(User user) {
         users.putIfAbsent(user, new ArrayList<>());
     }
 
     /**
-     * Метод находит пользователя по номеру паспорта
+     * Метод находит пользователя по номеру паспорта.
      * и добавляет ему банковский счет, если такого счета ещё нет.
-     * @param passport - номер паспорта пользователя
-     * @param account - добавляемый банковский счет
+     * @param passport номер паспорта пользователя.
+     * @param account добавляемый банковский счет.
      */
     public void addAccount(String passport, Account account) {
         User user = findByPassport(passport);
@@ -42,8 +42,8 @@ public class BankService {
     /**
      * Метод позволяет получить пользователя - {@code user}
      * с номером паспорта - {@code passport}.
-     * @param passport - номер паспорта, по которому производится поиск пользователя
-     * @return возвращаемый пользователь
+     * @param passport номер паспорта, по которому производится поиск пользователя.
+     * @return возвращаемый пользователь.
      */
     public User findByPassport(String passport) {
         for (User user : users.keySet()) {
@@ -58,9 +58,9 @@ public class BankService {
      * Метод позволяет получить банковский счет - {@code account}
      * по реквизитам счета - {@code requisite}
      * и номеру паспорта пользователя - {@code passport}.
-     * @param passport - номер паспорта, по которому производится поиск пользователя
-     * @param requisite - реквизиты, по которым производится поиск банковского счета
-     * @return возвращаемый банковский счет
+     * @param passport номер паспорта, по которому производится поиск пользователя.
+     * @param requisite реквизиты, по которым производится поиск банковского счета.
+     * @return возвращаемый банковский счет.
      */
     public Account findByRequisite(String passport, String requisite) {
         User user = findByPassport(passport);
@@ -77,12 +77,12 @@ public class BankService {
 
     /**
      * Метод предназначен для перевода денег с одного счета на другой.
-     * @param srcPassport - номер паспорта пользователя, отправляющего перевод
-     * @param srcRequisite - реквизиты, с которых производится перевод
-     * @param destPassport - номер паспорта пользователя, получающего перевод
-     * @param destRequisite - реквизиты, на которые производится перевод
-     * @param amount - сумма преводимых денег
-     * @return возвращает {@code true}, если перевод завершен успешно
+     * @param srcPassport номер паспорта пользователя, отправляющего перевод.
+     * @param srcRequisite реквизиты, с которых производится перевод.
+     * @param destPassport номер паспорта пользователя, получающего перевод.
+     * @param destRequisite реквизиты, на которые производится перевод.
+     * @param amount сумма преводимых денег.
+     * @return возвращает {@code true}, если перевод завершен успешно.
      */
     public boolean transferMoney(String srcPassport, String srcRequisite,
                                  String destPassport, String destRequisite, double amount) {
