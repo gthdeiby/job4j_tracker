@@ -33,8 +33,10 @@ public class AnalyzeTest {
     public void whenListOfPupilAverage() {
         List<Tuple> average = Analyze.averageScoreBySubject(
                 Stream.of(
-                        new Pupil("Ivanov", List.of(new Subject("Math", 100), new Subject("Lang", 100))),
-                        new Pupil("Petrov", List.of(new Subject("Math", 60), new Subject("Lang", 60)))
+                        new Pupil("Ivanov", List.of(new Subject("Math", 100),
+                                new Subject("Lang", 100))),
+                        new Pupil("Petrov", List.of(new Subject("Math", 60),
+                                new Subject("Lang", 60)))
                 )
         );
         assertThat(average, is(List.of(
@@ -74,8 +76,10 @@ public class AnalyzeTest {
     public void whenBestPupil() {
         Tuple best = Analyze.bestStudent(
                 Stream.of(
-                        new Pupil("Ivanov", List.of(new Subject("Math", 100), new Subject("Lang", 100))),
-                        new Pupil("Petrov", List.of(new Subject("Math", 60), new Subject("Lang", 60)))
+                        new Pupil("Ivanov", List.of(new Subject("Math", 100),
+                                new Subject("Lang", 100))),
+                        new Pupil("Petrov", List.of(new Subject("Math", 60),
+                                new Subject("Lang", 60)))
                 )
         );
         assertThat(best, is(new Tuple("Ivanov", 200D)));
@@ -85,8 +89,10 @@ public class AnalyzeTest {
     public void whenBestSubject() {
         Tuple best = Analyze.bestSubject(
                 Stream.of(
-                        new Pupil("Ivanov", List.of(new Subject("Math", 100), new Subject("Lang", 40))),
-                        new Pupil("Petrov", List.of(new Subject("Math", 60), new Subject("Lang", 60)))
+                        new Pupil("Ivanov", List.of(new Subject("Math", 100),
+                                new Subject("Lang", 40))),
+                        new Pupil("Petrov", List.of(new Subject("Math", 60),
+                                new Subject("Lang", 60)))
                 )
         );
         assertThat(best, is(new Tuple("Math", 160D)));
