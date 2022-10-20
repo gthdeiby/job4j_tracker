@@ -31,7 +31,7 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.2.12</version>
+            <version>42.4.2</version>
         </dependency>
     </dependencies>
 
@@ -88,6 +88,14 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.2.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>4.15.0</version>
+                <configuration>
+                    <propertyFile>db/liquibase.properties</propertyFile>
+                </configuration>
             </plugin>
         </plugins>
     </build>
