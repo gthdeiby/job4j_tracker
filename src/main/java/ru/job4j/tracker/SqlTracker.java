@@ -88,6 +88,18 @@ public class SqlTracker implements Store, AutoCloseable {
     }
 
     @Override
+    public boolean clear() {
+        boolean result = false;
+        try (PreparedStatement ps = cn.prepareStatement(
+                "truncate items")) {
+            result = ps.executeUpdate() > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    @Override
     public List<Item> findAll() {
         List<Item> items = new ArrayList<>();
         try (PreparedStatement ps = cn.prepareStatement(
