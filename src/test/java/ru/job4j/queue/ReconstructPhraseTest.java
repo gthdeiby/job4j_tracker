@@ -27,7 +27,8 @@ class ReconstructPhraseTest {
                 )
         );
         String expected = "Slogan of language Java: Write once, run everywhere";
-        String result = new ReconstructPhrase(descendingElements, evenElements).getReconstructPhrase();
+        String result = new ReconstructPhrase(descendingElements, evenElements)
+                .getReconstructPhrase();
         assertThat(result).isEqualTo(expected);
     }
 }
