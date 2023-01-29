@@ -1,10 +1,9 @@
 package ru.job4j.queue;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
+import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 class AppleStoreTest {
