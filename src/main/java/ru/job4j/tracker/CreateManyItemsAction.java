@@ -9,15 +9,17 @@ public class CreateManyItemsAction implements UserAction {
 
     @Override
     public String name() {
-        return "Add 10.000 Items";
+        return "Create many items";
     }
 
     @Override
     public boolean execute(Input input, Store tracker) {
-        out.println("=== Create 10.000 new Items ===");
-        for (int i = 0; i < 10_000; i++) {
-            tracker.add(new Item("Item " + i));
+        out.println("=== Create many items ===");
+        int count = input.askInt("Введите кол-во заявок: ");
+        for (int i = 0; i < count; i++) {
+            tracker.add(new Item("Заявка № " + i));
         }
+        out.println("Добавлено заявок: " + count);
         return true;
     }
 }

@@ -69,12 +69,6 @@ public class MemTracker implements Store {
     }
 
     @Override
-    public boolean clear() {
-        items.clear();
-        return true;
-    }
-
-    @Override
     public String toString() {
         return "Tracker{"
                 + "items=" + items
