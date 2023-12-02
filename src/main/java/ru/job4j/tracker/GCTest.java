@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import ru.job4j.tracker.action.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,15 +39,15 @@ public class GCTest {
         Input input = new ValidateInput(output, new ConsoleInput());
         MemTracker tracker = new MemTracker();
         List<UserAction> actions = new ArrayList<>(List.of(
-                new CreateAction(output),
-                new ShowAction(output),
-                new EditActions(output),
-                new DeleteAction(output),
-                new FindByIdAction(output),
-                new FindByNameAction(output),
-                new ExitAction(output),
-                new CreateManyItemsAction(output),
-                new DeleteItemsAction(output)));
+                new Create(output),
+                new Show(output),
+                new Edit(output),
+                new Delete(output),
+                new FindById(output),
+                new FindByName(output),
+                new Exit(output),
+                new CreateManyItems(output),
+                new DeleteItems(output)));
         new StartUI(output).init(input, tracker, actions);
     }
 }

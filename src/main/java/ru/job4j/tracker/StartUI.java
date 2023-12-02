@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import ru.job4j.tracker.action.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,13 +40,13 @@ public class StartUI {
         try (SqlTracker tracker = new SqlTracker()) {
             tracker.init();
             List<UserAction> actions = new ArrayList<>(List.of(
-                new CreateAction(output),
-                new ShowAction(output),
-                new EditActions(output),
-                new DeleteAction(output),
-                new FindByIdAction(output),
-                new FindByNameAction(output),
-                new ExitAction(output)));
+                new Create(output),
+                new Show(output),
+                new Edit(output),
+                new Delete(output),
+                new FindById(output),
+                new FindByName(output),
+                new Exit(output)));
             new StartUI(output).init(input, tracker, actions);
         } catch (Exception e) {
             e.printStackTrace();

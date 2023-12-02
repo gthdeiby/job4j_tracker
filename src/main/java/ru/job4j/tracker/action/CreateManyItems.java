@@ -1,9 +1,14 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.action;
 
-public class CreateManyItemsAction implements UserAction {
+import ru.job4j.tracker.Input;
+import ru.job4j.tracker.Item;
+import ru.job4j.tracker.Output;
+import ru.job4j.tracker.Store;
+
+public class CreateManyItems implements UserAction {
     private final Output out;
 
-    public CreateManyItemsAction(Output out) {
+    public CreateManyItems(Output out) {
         this.out = out;
     }
 
