@@ -9,4 +9,5 @@
 		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
 		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
     <include file="scripts/update_001.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/002_dml_insert_items_data.sql" relativeToChangelogFile="true"/>
 </databaseChangeLog>
